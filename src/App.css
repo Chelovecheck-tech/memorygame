@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 1rem;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #ff7e5f;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #ff7e5f;
+  color: white;
+}
+
+button.active {
+  background-color: #ff7e5f;
+  color: white;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Автоматическая настройка колонок */
+  grid-gap: 15px;
+  justify-content: center;
+  align-items: center; /* Центрирование по вертикали */
+  width: 100%; /* Ширина игрового поля */
+  max-width: 1000px; /* Максимальная ширина */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100%; /* Растягивание карточек по ширине контейнера */
+  height: 100px;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: transform 0.3s;
+}
+
+/* Уменьшение размера карточек на более сложных уровнях */
+.App.medium .card {
+  height: 80px;
+}
+
+.App.hard .card {
+  height: 70px;
+}
+
+.card-value {
+  font-size: 2.5rem;
+}
+
+.card-back {
+  font-size: 3rem;
+  color: #ccc;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
